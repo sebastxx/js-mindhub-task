@@ -47,9 +47,12 @@ h1{
     margin: 5px;
 }
 
-bi-chevron-left, bi-chevron-right{
-    color: #D90368;
-    font-size: 1rem;
-    align-content: center;
-    margin: 5px;
+.bi-chevron-left, .bi-chevron-right{
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.bi-chevron-left:hover, .bi-chevron-right:hover{
+    color: #424242;
+    font-size: 1.5rem;
 }
