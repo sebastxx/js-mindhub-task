@@ -1,0 +1,32 @@
+.logo{
+    width: 150px;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary{
+    background-color: #D90368;
+    border-color: #D90368;
+}
+
+.row{
+    align-items: center;
+}
+
+.nav-link:hover{
+    color: #D90368;
+}
+
+.card{
+    margin-top: 1rem;
+}
+
+.bi{
+    color: #D90368;
+    font-size: 2rem;
+    margin: 5px;
+}
