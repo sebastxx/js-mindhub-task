@@ -2,6 +2,16 @@
     width: 150px;
 }
 
+.nav-title{
+    background: #D90368;
+    height: 120px;
+}
+
+h1{
+    color: #FFFFFF;
+    text-align: center;
+}
+
 .card-img-top{
     width: 100%;
     height: 200px;
@@ -25,8 +35,21 @@
     margin-top: 1rem;
 }
 
-.bi{
+.bi-instagram, .bi-facebook, .bi-whatsapp{
     color: #D90368;
     font-size: 2rem;
+    margin: 5px;
+}
+
+.bi-search{
+    color: #D90368;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+bi-chevron-left, bi-chevron-right{
+    color: #D90368;
+    font-size: 1rem;
+    align-content: center;
     margin: 5px;
 }
