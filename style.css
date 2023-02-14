@@ -26,7 +26,7 @@ h1{
 
 .btn-primary{
     background-color: #D90368;
-    border-color: #D90368;
+    border: none;
 }
 
 .row{
@@ -77,11 +77,11 @@ h1{
 
 .btn-secondary{
     background-color: #D90368;
-    border-color: #D90368;
+    border: none;
 }
 .btn-secondary:hover{
     background-color: #840042;
-    border-color: #840042;
+    border: none;
 }
 
 .form-input,
@@ -110,4 +110,8 @@ td{
 
 strong{
     font-size: 1.5rem;
+}
+
+.details{
+    margin-top: 5rem;
 }
