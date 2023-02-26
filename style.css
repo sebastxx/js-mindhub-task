@@ -138,20 +138,4 @@ body {
     flex-shrink: 0;
 }
 
-/* .card-text {
-    max-height: 10em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-} */
 
-.card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.card-body {
-  flex-grow: 1;
-}
