@@ -22,3 +22,21 @@ for (const event of data.events) {
 }
 
 container.innerHTML = cards;
+
+// // Seleccionar todas las cards
+// const cardsHeight = document.querySelectorAll('.card');
+
+// // Inicializar la altura más alta en 0
+// let maxHeight = 0;
+
+// // Recorrer todas las cards y determinar la altura más alta
+// cardsHeight.forEach(card => {
+//   if (card.clientHeight > maxHeight) {
+//     maxHeight = card.clientHeight;
+//   }
+// });
+
+// // Establecer la misma altura en todas las cards
+// cardsHeight.forEach(card => {
+//   card.style.height = `${maxHeight}px`;
+// });
