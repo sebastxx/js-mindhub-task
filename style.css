@@ -13,7 +13,8 @@ body{
 }
 
 .nav-title{
-    background: #D90368;
+    background-image: url(./assets/img/music-concert.jpg);
+    background: #d90368;
     height: 120px;
 }
 

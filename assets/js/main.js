@@ -97,7 +97,7 @@ function createCards(eventsList) {
                                     <p>Price: $ ${event.price}</p>
                                 </div>
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <a href="./details.html?id=${eventsList[i]._id}" class="btn btn-primary">View more</a>
+                                    <a href="./details.html?id=${event._id}" class="btn btn-primary">View more</a>
                                 </div>
                             </div>
                         </div>
