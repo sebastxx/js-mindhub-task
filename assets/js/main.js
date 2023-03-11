@@ -1,5 +1,23 @@
+const urlApi = './assets/api/amazing_1.json';
 let checked = []; // Array para guardar los checkbox seleccionados
 let search = ''; // Variable para guardar el valor del input de busqueda
+
+// Funcion asincrona que obtiene los datos de la API
+async function getData() {
+    await fetch(urlApi)
+        .then(response => response.json())
+        .then(urlApi => {
+            data = urlApi;
+            loadCategories();
+            loadCheckbox();
+            checksAndSearch();
+            loadSearch();
+            heightCards();
+        })
+        .catch(error => console.log(error))
+}
+
+getData();
 
 // Función que lee las categorias de los eventos y crea un checkbox por cada categoria
 function loadCategories() {
@@ -7,7 +25,6 @@ function loadCategories() {
     let templateCheckbox = '';
 
     // Se recorre el array de eventos y se guarda el nombre de las categorias sin repetir en el array vacio
-
     let categories = data.events.map(event => event.category);
     let setCategories = new Set(categories);
     let arrayCategories = [...setCategories];
@@ -22,8 +39,6 @@ function loadCategories() {
         checkbox.innerHTML = templateCheckbox;
     })
 }
-
-loadCategories();
 
 // Función que lee la actividad de los checkbox
 function loadCheckbox() {
@@ -41,8 +56,6 @@ function loadCheckbox() {
     });
 }
 
-loadCheckbox();
-
 //función que lee el input de busqueda
 function loadSearch() {
     let input = document.getElementById('search');
@@ -52,22 +65,20 @@ function loadSearch() {
     });
 }
 
-loadSearch();
-
 // Función que une las busquedas por checkbox y por input
 function checksAndSearch() {
     let filteredEvents = [];
 
     if (checked.length > 0 && search !== "") {
-        checked.map(cat => {
+        checked.map(category => {
             filteredEvents.push(...data.events.filter(event => event.name.toLowerCase().includes(search.trim().toLowerCase()) &&
-                event.category == cat))
+                event.category == category))
         })
 
         console.log(filteredEvents)
     } else if (checked.length > 0 && search === "") {
-        checked.map(cat => {
-            filteredEvents.push(...data.events.filter(event => event.category == cat))
+        checked.map(category => {
+            filteredEvents.push(...data.events.filter(event => event.category == category))
         })
     } else if (checked.length == 0 && search !== "") {
         filteredEvents.push(...data.events.filter(event => event.name.toLowerCase().includes(search.trim().toLowerCase())))
@@ -75,9 +86,8 @@ function checksAndSearch() {
         filteredEvents.push(...data.events);
     }
     createCards(filteredEvents);
+    heightCards();
 }
-
-checksAndSearch();
 
 // Función que regula la altura de las cards para que todas tengan la misma altura
 function heightCards() {
@@ -92,10 +102,3 @@ function heightCards() {
         card.style.height = `${maxHeight}px`;
     });
 }
-
-heightCards();
-
-// Función que se ejecuta cada vez que se redimensiona la pantalla
-// window.addEventListener('resize', () => {
-//     heightCards();
-// });
