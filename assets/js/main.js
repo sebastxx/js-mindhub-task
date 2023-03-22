@@ -1,4 +1,4 @@
-const urlApi = './assets/api/amazing_1.json';
+const urlApi = 'https://mindhub-xj03.onrender.com/api/amazing';
 let checked = []; // Array para guardar los checkbox seleccionados
 let search = ''; // Variable para guardar el valor del input de busqueda
 

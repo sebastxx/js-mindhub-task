@@ -1,3 +1,17 @@
+const urlApi = './assets/api/amazing_1.json';
+
+// Funcion asincrona que obtiene los datos de la API
+async function getData() {
+    await fetch(urlApi)
+        .then(response => response.json())
+        .then(urlApi => {
+            data = urlApi;
+            details();
+        })
+        .catch(error => console.log(error))
+}
+
+getData();
 
 function details() {
     const queryString = location.search;
@@ -32,5 +46,3 @@ function details() {
                             </div>
                         </div>`
 }
-
-details();
